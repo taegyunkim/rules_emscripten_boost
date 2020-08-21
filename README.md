@@ -1,1 +1,1 @@
-echo # rules_emscripten_boost
+# rules_emscripten_boost
