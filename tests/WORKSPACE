@@ -1,0 +1,19 @@
+local_repository(
+    name = "com_github_taegyunkim_rules_emscripten_boost",
+    path = "..",
+)
+
+load("@com_github_taegyunkim_rules_emscripten_boost//boost:boost.bzl", "boost_deps")
+
+# boost_deps() will re-download the tarball every time BUILD.boost
+# changes, which is frustrating for doing development. Download it
+# yourself, uncomment the below and change the path as appropriate
+# for a faster iteration cycle on changes.
+#
+new_local_repository(
+    name = "boost",
+    build_file = "@com_github_taegyunkim_rules_emscripten_boost//:BUILD.boost",
+    path = "/Users/taegyunkim/Downloads/boost_headers/",
+)
+
+boost_deps()
