@@ -201,6 +201,15 @@ cc_test(
 )
 
 cc_test(
+    name = "graph_test",
+    size = "small",
+    srcs = ["graph_test.cc"],
+    deps = [
+        "@boost//:graph",
+    ],
+)
+
+cc_test(
     name = "icl_test",
     size = "small",
     srcs = ["icl_test.cc"],
